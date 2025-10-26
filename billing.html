@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Billing</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+</head>
+<body>
+  <div class="page">
+    <h2>Billing Section</h2>
+
+    <form id="billingForm" class="form-inline">
+      <select id="productSelect"></select>
+      <input type="number" id="qty" placeholder="Quantity" required>
+      <button type="submit">Add Item</button>
+    </form>
+
+    <table id="billTable">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price (₹)</th>
+          <th>Qty</th>
+          <th>Total (₹)</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="calculation">
+      <input type="number" id="discount" placeholder="Discount %" value="0">
+      <input type="number" id="tax" placeholder="Tax %" value="0">
+      <button id="generateInvoice">Generate Invoice</button>
+    </div>
+
+    <div id="invoiceSection" class="invoice-box" style="display:none;">
+      <!--<img src="image.jpg" class="invoice-logo" alt="Logo">-->
+      <h3>Invoice</h3>
+      <div id="invoiceDetails"></div>
+      <svg id="barcode"></svg>
+    </div>
+  </div>
+  <script src="billing.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Billing - Inventory App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>🧾 Billing System</h1>
+  <nav>
+    <a href="Home.html">🏠 Home</a>
+    <a href="products.html">📦 Inventory</a>
+    <a href="customers.html">👥 Customers</a>
+    <a href="invoices.html">📜 Invoices</a>
+  </nav>
+
+  Billing Form 
+  <form id="addItemForm">
+    <label for="customerName">Customer Name:</label>
+    <input type="text" id="customerName" placeholder="Enter customer name" required />
+
+    <label for="productSelect">Select Product:</label>
+    <select id="productSelect"></select>
+
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" placeholder="Enter quantity" required />
+
+    <button type="submit">Add to Invoice</button>
+  </form>
+
+  Invoice Table 
+  <table id="invoiceTable">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Qty</th>
+        <th>Price</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div id="invoiceSummary">
+    <label>Discount (₹): </label>
+    <input type="number" id="discount" value="0" />
+    <label>Tax (%): </label>
+    <input type="number" id="taxPercent" value="0" />
+    <p id="grandTotal">Grand Total: ₹0.00</p>
+    <button id="saveInvoiceBtn">💾 Save Invoice</button>
+    <button id="printInvoiceBtn">🖨 Print Invoice</button>
+  </div>
+
+  Invoice Preview (for print) 
+  <div id="invoicePreview" style="display:none;"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+  <script src="billing.js"></script>
+</body>
+</html>-->
