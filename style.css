@@ -74,4 +74,118 @@ body {
     background: linear-gradient(135deg, #2980b9, #1f6391);
     transform: scale(1.05);
   }
+
+
+  /* new*/
+  .invoice-box {
+    margin-top: 25px;
+    border: 2px solid #dfe6e9;
+    padding: 20px;
+    border-radius: 12px;
+    background: #f8f9fa;
+    text-align: center;
+  }
+  .invoice-logo {
+    width: 100px;
+    margin-bottom: 10px;
+  }
+  .thanks {
+    margin-top: 10px;
+    color: #636e72;
+    font-style: italic;
+  }
+  #printBtn {
+    margin-top: 10px;
+    background: #0984e3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  #printBtn:hover {
+    background: #0652DD;
+  }
+  
+  /* Print only invoice */
+  @media print {
+    body * { visibility: hidden; }
+    #invoiceSection, #invoiceSection * { visibility: visible; }
+    #invoiceSection { position: absolute; left: 0; top: 0; width: 100%; }
+    #printBtn { display: none; }
+  }
+  
+  #sendBtn {
+    margin-top: 10px;
+    background: #00b894;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  #sendBtn:hover {
+    background: #019170;
+  }
+  
+
+  
+/* ----- CUSTOMER TABLE STYLING ----- */
+.page {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.page h2 {
+  text-align: center;
+  color: #2d3436;
+  margin-bottom: 20px;
+}
+
+#customerTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#customerTable th, #customerTable td {
+  border: 1px solid #dfe6e9;
+  padding: 12px 10px;
+  text-align: center;
+}
+
+#customerTable th {
+  background: #0984e3;
+  color: white;
+  font-weight: 600;
+}
+
+#customerTable tr:nth-child(even) {
+  background: #f8f9fa;
+}
+
+#customerTable tr:hover {
+  background: #dfe6e9;
+}
+
+/* Delete Button */
+.deleteBtn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.deleteBtn:hover {
+  background: #c0392b;
+}
+  
   
